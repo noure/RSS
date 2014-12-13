@@ -49,19 +49,29 @@ public class InitDbService {
 		User userAdmin = new User();
 		userAdmin.setEnabled(true);
 		userAdmin.setName("admin");
+		userAdmin.setEmail("nourr@quoi.com");
 		BCryptPasswordEncoder encoder=new BCryptPasswordEncoder();
 		userAdmin.setPassword(encoder.encode("admin"));
 		List<Role> roles = new ArrayList<Role>();
 		roles.add(roleAdmin);
 		roles.add(roleUser);
 		userAdmin.setRoles(roles);
-
 		userRepository.save(userAdmin);
+		User userNour = new User();
+		userNour.setEnabled(true);
+		userNour.setName("nour");
+		userNour.setEmail("nourr@quoi.com");
+		userNour.setPassword(encoder.encode("nourr"));
+		roles.add(roleAdmin);
+		roles.add(roleUser);
+		userNour.setRoles(roles);
+
+		userRepository.save(userNour);
 
 		Blog blogJavaVids = new Blog();
 		blogJavaVids.setName("JavaVids");
 		blogJavaVids.setUrl("http://feeds.feedburner.com/javavids?format=xml");
-		blogJavaVids.setUser(userAdmin);
+		blogJavaVids.setUser(userNour);
 		blogRepository.save(blogJavaVids);
 
 		Item item1 = new Item();

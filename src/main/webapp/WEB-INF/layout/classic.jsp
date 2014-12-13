@@ -9,8 +9,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="navbar-static-top.css" rel="stylesheet">
-<link href="bootstrap.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="/WEB-INF/css/navbar-static-top.css" > -->
+<!-- <link rel="stylesheet" href="/WEB-INF/css/bootstrap.min.css" > -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript"
